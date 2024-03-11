@@ -1,0 +1,16 @@
+{
+  "name": "f1driverresults",
+  "version": "1.0.0",
+  "description": "A website where a user can search for their desired F1 driver and find their timings and race results for each race of the 2024 season.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.18.3",
+    "pg": "^8.11.3"
+  }
+}

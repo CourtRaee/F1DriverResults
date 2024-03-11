@@ -19,3 +19,32 @@ export const pool = new pg.Pool({
     rejectUnauthorized: false, // Important for some cloud databases, use with caution
   },
 });
+
+const express = require("express");
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
+// Run PostgreSQL
+const { Client } = require("pg");
+
+const client = new Client({
+  user: "your_username",
+  host: "localhost",
+  database: "your_database",
+  password: "your_password",
+  port: 5432,
+});
+
+client
+  .connect()
+  .then(() => console.log("Connected to the database"))
+  .catch((err) => console.error("Error connecting to the database", err))
+  .finally(() => client.end());
