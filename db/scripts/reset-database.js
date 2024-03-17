@@ -36,26 +36,37 @@ await pool.query(`
 
 // Seed the drivers table - fill in the data
 await pool.query(`
-      INSERT INTO drivers (driver_name, driver_team)
+      INSERT INTO drivers (id, driver_name, driver_team)
       VALUES
-          ('Max Verstappen', 'RED BULL RACING HONDA RBPT'),
-          ('Sergio Perez', 'RED BULL RACING HONDA RBPT'),
-          ('Carlos Sainz', 'FERRARI'),
-          ('Charles Leclerc', 'FERRARI'),
-          ('George Russell', 'MERCEDES'),
-          ('Lando Norris', 'MCLAREN MERCEDES'),
-          ('Lewis Hamilton', 'MERCEDES'),
-          ('Oscar Piastri', 'MCLAREN MERCEDES'),
-          ('Fernando Alonso', 'ASTON MARTIN ARAMCO MERCEDES'),
-          ('Lance Stroll', 'ASTON MARTIN ARAMCO MERCEDES'),
-          ('Zhou Guanyu', 'KICK SAUBER FERRARI'),
-          ('Kevin Magnussen', 'HAAS FERRARI'),
-          ('Daniel Ricciardo', 'RB HONDA RBPT'),
-          ('Yuki Tsunoda', '	RB HONDA RBPT'),
-          ('Alexander Albon', 'WILLIAMS MERCEDES'),
-          ('Nico Hulkenberg', '	HAAS FERRARI'),
-          ('Esteban Ocon', 'ALPINE RENAULT'),
-          ('Pierre Gasly', 'ALPINE RENAULT'),
-          ('Valtteri Bottas', 'KICK SAUBER FERRARI'),
-          ('Logan Sargeant', 'WILLIAMS MERCEDES'),
+          ('1', 'Max Verstappen', 'RED BULL RACING HONDA RBPT'),
+          ('2', 'Sergio Perez', 'RED BULL RACING HONDA RBPT'),
+          ('3', 'Carlos Sainz', 'FERRARI'),
+          ('4', 'Charles Leclerc', 'FERRARI'),
+          ('5', 'George Russell', 'MERCEDES'),
+          ('6', 'Lando Norris', 'MCLAREN MERCEDES'),
+          ('7', 'Lewis Hamilton', 'MERCEDES'),
+          ('8', 'Oscar Piastri', 'MCLAREN MERCEDES'),
+          ('9', 'Fernando Alonso', 'ASTON MARTIN ARAMCO MERCEDES'),
+          ('10', 'Lance Stroll', 'ASTON MARTIN ARAMCO MERCEDES'),
+          ('11', 'Zhou Guanyu', 'KICK SAUBER FERRARI'),
+          ('12', 'Kevin Magnussen', 'HAAS FERRARI'),
+          ('13', 'Daniel Ricciardo', 'RB HONDA RBPT'),
+          ('14', 'Yuki Tsunoda', '	RB HONDA RBPT'),
+          ('15', 'Alexander Albon', 'WILLIAMS MERCEDES'),
+          ('16', 'Nico Hulkenberg', '	HAAS FERRARI'),
+          ('17', 'Esteban Ocon', 'ALPINE RENAULT'),
+          ('18', 'Pierre Gasly', 'ALPINE RENAULT'),
+          ('19', 'Valtteri Bottas', 'KICK SAUBER FERRARI'),
+          ('20', 'Logan Sargeant', 'WILLIAMS MERCEDES'),
+`);
+
+// Seed the results table - fill in the data
+await pool.query(`
+      INSERT INTO results (id, date, race_location, race_result, timing)
+      VALUES
+          ('1', '02.03.24', 'Bahrain', '1', '1:31:44.742'),
+          ('2', '02.03.24', 'Bahrain', '2', '1:31:67.199'),
+          ('3', '02'03'24', 'Bahrain', '3', '1:31:69.852'),
+          ('4', '02.03.24', 'Bahrain', '4', '1:31:84.411'),
+          ('5', '02.03.24', 'Bahrain')
 `);
